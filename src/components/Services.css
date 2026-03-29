@@ -19,6 +19,7 @@
   gap: 14px;
   position: relative;
   transition: border-color 0.3s, transform 0.3s;
+  align-self: stretch;
 }
 
 .step-card:hover {
