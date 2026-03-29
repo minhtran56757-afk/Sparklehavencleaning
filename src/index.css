@@ -142,3 +142,39 @@ a {
     font-size: clamp(26px, 8vw, 40px);
   }
 }
+
+/* Mobile sticky button */
+.mob-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8000;
+  background: var(--gold);
+  color: var(--dark);
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 -4px 20px rgba(201, 168, 76, 0.5);
+  font-family: "DM Sans", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .mob-sticky {
+    display: block;
+  }
+}
+
+/* Active nav link */
+.nl.ac {
+  color: var(--gold);
+}
+
+.nl.ac::after {
+  transform: scaleX(1);
+}

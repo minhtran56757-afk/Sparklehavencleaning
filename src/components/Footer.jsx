@@ -3,35 +3,35 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="dark">
-      <div className="inner">
-        <div className="footer-top">
-          <div className="footer-brand">
-            <div className="logo-placeholder">SH</div>
-            <p>Sydney&rsquo;s most meticulous cleaning service, delivering excellence to your doorstep every day.</p>
-          </div>
-          <div className="footer-links">
-            <h4>Quick Links</h4>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Get a Quote</a>
-          </div>
-          <div className="footer-links">
-            <h4>Services</h4>
-            <a>House Cleaning</a>
-            <a>Deep Cleaning</a>
-            <a>Office Cleaning</a>
-            <a>End of Lease</a>
-          </div>
+    <footer>
+      <div className="fi">
+        <div className="fb">
+          <div className="logo-placeholder">SH</div>
+          <p>Professional, eco-friendly cleaning services across Sydney. Reliable, trusted, and tailored to your home.</p>
         </div>
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Sparkle Haven Cleaning Services. All rights reserved.</p>
-          <div className="footer-legal">
-            <a>Privacy Policy</a>
-            <a>Terms of Service</a>
-          </div>
+        <div className="fc">
+          <h4>Services</h4>
+          <a href="#services">General Clean</a>
+          <a href="#services">Deep Clean</a>
+          <a href="#offers">Special Offers</a>
         </div>
+        <div className="fc">
+          <h4>Company</h4>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div className="fc">
+          <h4>Contact</h4>
+          <a href="tel:0439578719">0439 578 719</a>
+          <a href="mailto:Hello@sparklehavencleaning.com.au">Hello@sparklehavencleaning.com.au</a>
+          <a href="#contact">Book Online</a>
+        </div>
+      </div>
+      <div className="fbot">
+        <span>&copy; {new Date().getFullYear()} Sparkle Haven Cleaning. All rights reserved.</span>
+        <span>Sydney, NSW, Australia</span>
       </div>
     </footer>
   );

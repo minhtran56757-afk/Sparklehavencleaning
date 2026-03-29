@@ -1,70 +1,120 @@
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+.rv-sec {
+  overflow: hidden;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.rev-card {
-  background: rgba(255, 255, 255, 0.03);
+.rv-hd {
+  padding: 0 48px;
+}
+
+.mq-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.mq-wrap::before,
+.mq-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mq-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--navy), transparent);
+}
+
+.mq-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--navy), transparent);
+}
+
+.mq-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 4px 0 20px;
+  animation: marquee 45s linear infinite;
+}
+
+.mq-track:hover {
+  animation-play-state: paused;
+}
+
+.mq-card {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 40px;
   border-radius: 8px;
+  padding: 22px;
+  width: 300px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  transition: background 0.3s;
+  gap: 10px;
+  transition: border-color 0.3s, transform 0.3s;
 }
 
-.rev-card:hover {
-  background: rgba(255, 255, 255, 0.05);
+.mq-card:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-3px);
 }
 
-.rev-stars {
-  color: var(--gold);
-  font-size: 14px;
-}
-
-.rev-text {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
-  line-height: 1.7;
-}
-
-.rev-user {
-  margin-top: auto;
+.mq-user {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.rev-avatar {
-  width: 44px;
-  height: 44px;
-  background: var(--gold);
-  color: var(--dark);
+.mq-avatar {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
   font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
 }
 
-.rev-name {
+.mq-name {
+  font-size: 14px;
   font-weight: 600;
   color: var(--white);
-  font-size: 15px;
+  display: block;
 }
 
-.rev-loc {
-  font-size: 12px;
+.mq-service {
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  display: block;
+  margin-top: 2px;
 }
 
-@media (max-width: 1000px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
+.mq-stars {
+  display: flex;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.mq-text {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .rv-hd {
+    padding: 0 20px;
   }
 }

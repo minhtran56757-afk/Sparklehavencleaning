@@ -1,99 +1,243 @@
-.contact-container {
+.ct-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 68px;
   align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
-.info-item {
+.ct-info {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 24px;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.info-ico {
-  width: 52px;
-  height: 52px;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  border-radius: 8px;
+.ci {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.ci-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(201, 168, 76, 0.35);
+  background: rgba(201, 168, 76, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ci-ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ci h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.ci a,
+.ci p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  line-height: 1.6;
+  transition: color 0.2s;
+}
+
+.ci a:hover {
   color: var(--gold);
 }
 
-.info-ico svg {
-  width: 24px;
-  height: 24px;
+.ci-gtee {
+  background: rgba(201, 168, 76, 0.07);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 6px;
+  padding: 22px 20px;
 }
 
-.info-item span {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 4px;
-}
-
-.info-item strong {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--white);
-}
-
-.contact-form {
-  background: var(--navy);
-  padding: 48px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.form-group {
-  margin-bottom: 24px;
-}
-
-.form-group label {
-  display: block;
+.ci-gtee-t {
   font-size: 12px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 8px;
-  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
   letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.form-group input, 
-.form-group select, 
-.form-group textarea {
-  width: 100%;
-  padding: 14px 18px;
+.ci-gtee p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.65;
+}
+
+.form-card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 8px;
+  padding: 44px 40px;
+}
+
+.form-h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
   color: var(--white);
-  font-family: inherit;
-  font-size: 15px;
+  margin-bottom: 6px;
 }
 
-.form-group input:focus, 
-.form-group select:focus, 
-.form-group textarea:focus {
+.form-sub {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fg {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.fg label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fg input,
+.fg select,
+.fg textarea {
+  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 3px;
+  padding: 13px 15px;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  color: var(--white);
   outline: none;
-  border-color: var(--gold);
-  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  transition: border-color 0.25s, background 0.25s;
+  appearance: none;
 }
 
-@media (max-width: 1000px) {
-  .contact-container {
+.fg input::placeholder,
+.fg textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.fg input:focus,
+.fg select:focus,
+.fg textarea:focus {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.08);
+}
+
+.fg select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(201,168,76,0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-color: rgba(201, 168, 76, 0.06);
+  padding-right: 38px;
+}
+
+.fg select option {
+  background: #00111e;
+  color: #fff;
+}
+
+.fg textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  padding: 17px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.25s, box-shadow 0.25s;
+  box-shadow: 0 6px 24px rgba(201, 168, 76, 0.25);
+}
+
+.btn-submit:hover {
+  background: var(--gold-l);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.4);
+}
+
+.form-note {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.form-ok {
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 3px;
+  padding: 20px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .ct-layout {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  
-  .contact-form {
-    padding: 32px;
+
+  .form-card {
+    padding: 32px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    padding: 26px 16px;
+  }
+
+  .ct-layout {
+    gap: 36px;
   }
 }
