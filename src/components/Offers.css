@@ -19,8 +19,21 @@
 
 .oi {
   position: relative;
-  height: 220px;
+  height: 280px;
   overflow: hidden;
+}
+
+.oi-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.oc:hover .oi-img {
+  transform: scale(1.06);
 }
 
 .oi-placeholder {
@@ -28,6 +41,18 @@
   height: 100%;
   background: linear-gradient(135deg, var(--navy) 0%, var(--mid) 100%);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.oi-placeholder-2 {
+  background: linear-gradient(135deg, var(--mid) 0%, #004080 100%);
+}
+
+.oi-placeholder-3 {
+  background: linear-gradient(135deg, #002a52 0%, #003366 50%, #001f3f 100%);
+}
+
+.oi-placeholder-4 {
+  background: linear-gradient(135deg, #001f3f 0%, #003355 50%, #002a52 100%);
 }
 
 .oc:hover .oi-placeholder {
@@ -100,5 +125,11 @@
 @media (max-width: 900px) {
   .og {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .oi {
+    height: 220px;
   }
 }

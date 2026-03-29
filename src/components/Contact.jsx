@@ -25,12 +25,12 @@ const Contact = () => {
         <div className="ct-layout">
           <div className="ct-info">
             <div className="rule" style={{ margin: '0 0 28px' }}></div>
-            <span className="ey">Contact Us</span>
-            <h2 className="sec-h2" style={{ textAlign: 'left' }}>
+            <span className="ey" style={{ fontSize: '13px', letterSpacing: '3px' }}>Contact Us</span>
+            <h2 className="sec-h2" style={{ textAlign: 'left', fontSize: 'clamp(36px, 4vw, 54px)' }}>
               <span className="tw">Get a Free </span>
               <span className="tg">Quote Today</span>
             </h2>
-            <p className="sec-p" style={{ margin: '0 0 40px', textAlign: 'left' }}>
+            <p className="sec-p" style={{ margin: '0 0 40px', textAlign: 'left', fontSize: '16px' }}>
               Fill out the form and our team will get back to you within 2 hours with a tailored estimate.
             </p>
 

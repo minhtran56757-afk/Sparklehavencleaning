@@ -1,12 +1,13 @@
 import React from 'react';
 import './Footer.css';
+import logoImg from '../assets/Logo.jpg';
 
 const Footer = () => {
   return (
     <footer>
       <div className="fi">
         <div className="fb">
-          <div className="logo-placeholder">SH</div>
+          <img src={logoImg} alt="Sparkle Haven" className="footer-logo-img" />
           <p>Professional, eco-friendly cleaning services across Sydney. Reliable, trusted, and tailored to your home.</p>
         </div>
         <div className="fc">

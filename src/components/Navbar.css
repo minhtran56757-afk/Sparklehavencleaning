@@ -38,17 +38,12 @@ header.sc {
   text-decoration: none;
 }
 
-.logo-placeholder {
-  width: 44px;
-  height: 44px;
-  background: var(--gold);
-  color: var(--dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
+.logo-img {
+  width: 64px;
+  height: 64px;
   border-radius: 8px;
-  font-family: "Playfair Display", serif;
+  object-fit: cover;
+  display: block;
 }
 
 .logo-name {
@@ -139,7 +134,7 @@ header.sc {
   flex-shrink: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .hbtn {
     display: none;
   }
@@ -178,6 +173,17 @@ header.sc {
 @media (max-width: 900px) {
   .hbug {
     display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .hin {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .logo-sub {
+    display: none;
   }
 }
 

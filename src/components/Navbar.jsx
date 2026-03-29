@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logoImg from '../assets/Logo.jpg';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -40,7 +41,7 @@ const Navbar = () => {
       <div className="hbar"></div>
       <div className="hin">
         <a className="logo" href="#home" onClick={closeMenu}>
-          <div className="logo-placeholder">SH</div>
+          <img src={logoImg} alt="Sparkle Haven" className="logo-img" />
           <div>
             <span className="logo-name">Sparkle Haven</span>
             <span className="logo-sub">Cleaning Services</span>
