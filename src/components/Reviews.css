@@ -40,11 +40,13 @@
   gap: 20px;
   width: max-content;
   padding: 4px 0 20px;
-  animation: marquee 45s linear infinite;
+  cursor: grab;
+  user-select: none;
+  will-change: transform;
 }
 
-.mq-track:hover {
-  animation-play-state: paused;
+.mq-track:active {
+  cursor: grabbing;
 }
 
 .mq-card {

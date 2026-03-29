@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Reviews.css';
 
 const reviews = [
@@ -33,6 +33,51 @@ const ReviewCard = ({ review }) => (
 );
 
 const Reviews = () => {
+  const trackRef = useRef(null);
+  const rafRef = useRef(null);
+  const offsetRef = useRef(0);
+  const dragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
+  const SPEED = 0.7;
+
+  useEffect(() => {
+    const track = trackRef.current;
+
+    const tick = () => {
+      if (!dragging.current) {
+        offsetRef.current += SPEED;
+        const setWidth = track.scrollWidth / 3;
+        if (offsetRef.current >= setWidth * 2) offsetRef.current -= setWidth;
+        if (offsetRef.current < 0) offsetRef.current += setWidth;
+        track.style.transform = `translateX(-${offsetRef.current}px)`;
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
+
+  const startDrag = (clientX) => {
+    dragging.current = true;
+    dragStartX.current = clientX;
+    dragStartOffset.current = offsetRef.current;
+  };
+
+  const moveDrag = (clientX) => {
+    if (!dragging.current) return;
+    const track = trackRef.current;
+    const setWidth = track.scrollWidth / 3;
+    let next = dragStartOffset.current + (dragStartX.current - clientX);
+    if (next >= setWidth * 2) next -= setWidth;
+    if (next < 0) next += setWidth;
+    offsetRef.current = next;
+    track.style.transform = `translateX(-${next}px)`;
+  };
+
+  const endDrag = () => { dragging.current = false; };
+
   return (
     <section id="reviews" className="sec navy rv-sec">
       <div className="rv-hd sec-hd">
@@ -45,8 +90,18 @@ const Reviews = () => {
         <p className="sec-p">Real reviews from real clients — verified and unedited.</p>
       </div>
       <div className="mq-wrap">
-        <div className="mq-track">
-          {[...reviews, ...reviews].map((rev, i) => (
+        <div
+          className="mq-track"
+          ref={trackRef}
+          onMouseDown={(e) => startDrag(e.clientX)}
+          onMouseMove={(e) => moveDrag(e.clientX)}
+          onMouseUp={endDrag}
+          onMouseLeave={endDrag}
+          onTouchStart={(e) => startDrag(e.touches[0].clientX)}
+          onTouchMove={(e) => moveDrag(e.touches[0].clientX)}
+          onTouchEnd={endDrag}
+        >
+          {[...reviews, ...reviews, ...reviews].map((rev, i) => (
             <ReviewCard key={i} review={rev} />
           ))}
         </div>
