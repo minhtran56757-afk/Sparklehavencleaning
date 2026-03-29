@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FAQ.css';
+import careerImg from '../assets/person photo.png';
 
 const faqs = [
   {
@@ -36,6 +37,7 @@ const FAQ = () => {
         </div>
         <div className="faq-layout">
           <div className="faq-img-col">
+            <img src={careerImg} alt="Satisfaction Guarantee" className="faq-img" />
             <div className="faq-badge">
               <span className="faq-bn">100%</span>
               <span className="faq-bl">Satisfaction Guarantee</span>

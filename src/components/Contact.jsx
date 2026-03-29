@@ -102,8 +102,7 @@ const Contact = () => {
                   <option value="">Select a service</option>
                   <option value="General Clean">General Clean — $160</option>
                   <option value="Deep Clean">Deep Clean — $230</option>
-                  <option value="End of Lease Clean">End of Lease Clean</option>
-                  <option value="Carpet Cleaning">Carpet Cleaning</option>
+                  <option value="Not Sure">Not sure — help me choose</option>
                 </select>
               </div>
               <div className="fg">
