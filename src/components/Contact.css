@@ -2,16 +2,16 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 48px;
-  align-items: center;
+  align-items: stretch;
   max-width: 1160px;
   margin: 0 auto;
-  justify-items: center;
 }
 
 .ct-info {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  justify-content: space-between;
 }
 
 .ci {
@@ -88,7 +88,7 @@
   border-radius: 8px;
   padding: 32px 32px;
   width: 100%;
-  align-self: center;
+  align-self: stretch;
 }
 
 .form-h3 {
