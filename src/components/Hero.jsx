@@ -4,6 +4,18 @@ import './Hero.css';
 const Hero = () => {
   return (
     <section id="home">
+      <div className="hero-orbs" aria-hidden="true">
+        <span className="orb orb1"></span>
+        <span className="orb orb2"></span>
+        <span className="orb orb3"></span>
+      </div>
+      <div className="hero-sparkles" aria-hidden="true">
+        <span className="sp sp1">✦</span>
+        <span className="sp sp2">✧</span>
+        <span className="sp sp3">✦</span>
+        <span className="sp sp4">✧</span>
+        <span className="sp sp5">✦</span>
+      </div>
       <div className="hero-inner">
         <span className="hero-pill">✦ Sydney&rsquo;s Professional Cleaning Service</span>
         <h1 className="hero-h1">

@@ -1,6 +1,6 @@
 .og {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 }
 
@@ -10,6 +10,25 @@
   overflow: hidden;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
+  position: relative;
+}
+
+.oc::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.oc:hover::after {
+  left: 160%;
 }
 
 .oc:hover {
@@ -19,7 +38,7 @@
 
 .oi {
   position: relative;
-  height: 280px;
+  height: 340px;
   overflow: hidden;
 }
 
@@ -71,9 +90,10 @@
   bottom: 14px;
   left: 16px;
   z-index: 1;
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold-l), var(--gold));
   color: var(--dark);
   font-size: 10px;
+  box-shadow: 0 3px 10px rgba(201, 168, 76, 0.45);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -82,19 +102,19 @@
 }
 
 .ob {
-  padding: 26px 28px 28px;
+  padding: 32px 32px 36px;
 }
 
 .ob h3 {
   font-family: "Playfair Display", serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 10px;
 }
 
 .ob p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   color: var(--muted);
   line-height: 1.75;
@@ -123,6 +143,12 @@
 }
 
 @media (max-width: 900px) {
+  .og {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   .og {
     grid-template-columns: 1fr;
   }

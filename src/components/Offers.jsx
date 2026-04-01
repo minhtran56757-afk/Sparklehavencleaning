@@ -4,6 +4,8 @@ import photo1 from '../assets/image 1.jpg';
 import photo2 from '../assets/image 2.jpg';
 import photo3 from '../assets/image 3.jpeg';
 import photo4 from '../assets/image 4.jpg';
+import photo5 from '../assets/Photo 5.png';
+import photo6 from '../assets/Photo 6.png';
 
 const Offers = () => {
   return (
@@ -65,6 +67,30 @@ const Offers = () => {
               <h3>Bundle &amp; Save Deal</h3>
               <p>Book <strong>3 or more cleans</strong> upfront and save 10% on every session. Flexible scheduling included.</p>
               <a className="ob-link" href="#contact">Get Started &rarr;</a>
+            </div>
+          </div>
+
+          <div className="oc">
+            <div className="oi">
+              <img src={photo5} alt="Loyalty Reward" className="oi-img" />
+              <span className="obg">Loyal Clients</span>
+            </div>
+            <div className="ob">
+              <h3>Loyalty Reward</h3>
+              <p>After your <strong>5th booking</strong> with us, receive a complimentary add-on clean of your choice — on the house.</p>
+              <a className="ob-link" href="#contact">Learn More &rarr;</a>
+            </div>
+          </div>
+
+          <div className="oc">
+            <div className="oi">
+              <img src={photo6} alt="Gift a Clean" className="oi-img" />
+              <span className="obg">Gift Idea</span>
+            </div>
+            <div className="ob">
+              <h3>Gift a Clean</h3>
+              <p>Treat someone you love to a <strong>professional clean</strong>. Gift vouchers available for any service or value.</p>
+              <a className="ob-link" href="#contact">Get a Voucher &rarr;</a>
             </div>
           </div>
 

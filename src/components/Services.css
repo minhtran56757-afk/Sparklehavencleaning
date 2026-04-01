@@ -23,8 +23,9 @@
 }
 
 .step-card:hover {
-  border-color: rgba(201, 168, 76, 0.35);
+  border-color: rgba(201, 168, 76, 0.5);
   transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(201, 168, 76, 0.15);
 }
 
 .step-n {
@@ -35,7 +36,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold-l), var(--gold));
   color: var(--dark);
   font-family: "Playfair Display", serif;
   font-size: 16px;
@@ -43,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.55), 0 0 0 3px rgba(201, 168, 76, 0.15);
 }
 
 .step-ico {

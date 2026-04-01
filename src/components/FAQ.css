@@ -1,7 +1,7 @@
 .faq-layout {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: 72px;
+  gap: 48px;
   align-items: center;
   max-width: 1160px;
   margin: 0 auto;

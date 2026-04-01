@@ -1,10 +1,10 @@
 #home {
   min-height: 100vh;
-  background: linear-gradient(145deg, #00111e 0%, var(--navy) 55%, var(--mid) 100%);
+  background: linear-gradient(160deg, #00090f 0%, #001428 40%, var(--navy) 75%, var(--mid) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 140px 40px 100px;
+  padding: 100px 40px 72px;
   position: relative;
   overflow: hidden;
 }
@@ -13,9 +13,41 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 55% at 50% 25%, rgba(201, 168, 76, 0.07), transparent 70%);
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(201, 168, 76, 0.09), transparent 65%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0, 42, 82, 0.6), transparent 70%);
   pointer-events: none;
 }
+
+/* Decorative orbs */
+.hero-orbs { position: absolute; inset: 0; pointer-events: none; }
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  background: radial-gradient(circle at 40% 40%, rgba(201, 168, 76, 0.04), transparent 70%);
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.orb1 { width: 400px; height: 400px; top: -100px; right: -80px; animation-delay: 0s; }
+.orb2 { width: 260px; height: 260px; bottom: 10%; left: -60px; animation-delay: 2s; }
+.orb3 { width: 180px; height: 180px; top: 40%; right: 12%; animation-delay: 4s; }
+
+/* Floating sparkles */
+.hero-sparkles { position: absolute; inset: 0; pointer-events: none; }
+
+.sp {
+  position: absolute;
+  color: var(--gold);
+  animation: sparkleFloat ease-in-out infinite;
+}
+
+.sp1 { top: 18%; left: 12%;  font-size: 16px; animation-duration: 5s;   animation-delay: 0s; }
+.sp2 { top: 30%; right: 14%; font-size: 10px; animation-duration: 6.5s; animation-delay: 1.2s; }
+.sp3 { bottom: 28%; left: 22%;  font-size: 13px; animation-duration: 4.5s; animation-delay: 2s; }
+.sp4 { top: 55%; right: 20%; font-size: 18px; animation-duration: 7s;   animation-delay: 0.8s; }
+.sp5 { bottom: 18%; right: 8%; font-size: 11px; animation-duration: 5.5s; animation-delay: 3s; }
 
 .hero-inner {
   max-width: 760px;
@@ -23,7 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 22px;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
@@ -32,16 +64,17 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.35);
   color: var(--gold);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 9px 20px;
+  padding: 10px 22px;
   border-radius: 50px;
-  animation: fadeUp 0.7s ease both;
+  animation: fadeUp 0.7s ease both, pulseGlow 4s ease-in-out 1s infinite;
+  box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
 }
 
 .hero-h1 {
@@ -54,9 +87,14 @@
 }
 
 .hero-h1 em {
-  color: var(--gold);
   font-style: italic;
   display: block;
+  background: linear-gradient(90deg, var(--gold) 20%, #ffe89a 50%, var(--gold) 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
 }
 
 .hero-p {
@@ -157,11 +195,11 @@
 }
 
 .stat-l {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
   display: block;
   margin-top: 5px;
 }

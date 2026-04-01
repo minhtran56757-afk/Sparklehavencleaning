@@ -9,7 +9,7 @@
 .pc {
   background: var(--white);
   border-radius: 8px;
-  padding: 56px 34px 34px;
+  padding: 40px 28px 28px;
   position: relative;
   overflow: visible;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
@@ -192,10 +192,10 @@
 .price-note {
   text-align: center;
   margin-top: 36px;
-  font-size: 12px;
-  letter-spacing: 3px;
+  font-size: 13px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 @media (max-width: 900px) {

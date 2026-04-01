@@ -1,7 +1,7 @@
 footer {
   background: #000f1a;
   border-top: 1px solid rgba(201, 168, 76, 0.12);
-  padding: 68px 48px 40px;
+  padding: 48px 48px 32px;
 }
 
 .fi {
@@ -25,7 +25,7 @@ footer {
 
 .fb p {
   font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.8;
   max-width: 260px;
 }
@@ -62,8 +62,8 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.5px;
 }
 
