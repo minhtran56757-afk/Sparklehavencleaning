@@ -1,10 +1,12 @@
 .og {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 
 .oc {
+  flex: 0 0 calc(33.333% - 16px);
   background: var(--white);
   border-radius: 8px;
   overflow: hidden;
@@ -143,14 +145,14 @@
 }
 
 @media (max-width: 900px) {
-  .og {
-    grid-template-columns: 1fr 1fr;
+  .oc {
+    flex: 0 0 calc(50% - 12px);
   }
 }
 
 @media (max-width: 600px) {
-  .og {
-    grid-template-columns: 1fr;
+  .oc {
+    flex: 0 0 100%;
   }
 }
 
