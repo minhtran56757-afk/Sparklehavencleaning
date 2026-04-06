@@ -109,17 +109,17 @@
 
 .ob h3 {
   font-family: "Playfair Display", serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 10px;
 }
 
 .ob p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  color: #2d3748;
-  line-height: 1.8;
+  color: #4a5568;
+  line-height: 1.75;
 }
 
 .ob p strong {

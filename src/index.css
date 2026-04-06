@@ -8,13 +8,13 @@
 }
 
 :root {
-  --navy: #002a5a;
-  --dark: #001a2e;
-  --mid: #003166;
-  --gold: #d4ae56;
-  --gold-l: #e8c96a;
+  --navy: #001f3f;
+  --dark: #00111e;
+  --mid: #002a52;
+  --gold: #C9A84C;
+  --gold-l: #dbb95e;
   --white: #fff;
-  --muted: #8a9bb0;
+  --muted: #6b7a8d;
 }
 
 html {
@@ -26,8 +26,7 @@ body {
   font-family: "DM Sans", sans-serif;
   color: var(--white);
   overflow-x: hidden;
-  line-height: 1.7;
-  font-size: 17px;
+  line-height: 1.6;
 }
 
 img {
@@ -111,7 +110,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -147,12 +146,12 @@ a {
 }
 
 .sec-p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.68);
   max-width: 540px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 /* Responsive Overrides */
