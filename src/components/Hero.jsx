@@ -1,9 +1,11 @@
 import React from 'react';
 import './Hero.css';
+import heroBg from '../assets/front page.jpg';
 
 const Hero = () => {
   return (
     <section id="home">
+      <img src={heroBg} alt="" className="hero-bg-img" aria-hidden="true" />
       <div className="hero-orbs" aria-hidden="true">
         <span className="orb orb1"></span>
         <span className="orb orb2"></span>

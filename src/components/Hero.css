@@ -14,13 +14,30 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(201, 168, 76, 0.09), transparent 65%),
-    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0, 42, 82, 0.6), transparent 70%);
+    linear-gradient(to bottom, rgba(0, 9, 15, 0.55) 0%, rgba(0, 20, 40, 0.72) 100%),
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(201, 168, 76, 0.08), transparent 65%);
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Background image */
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+  image-rendering: -webkit-optimize-contrast;
+  filter: blur(0.4px) contrast(1.08) brightness(1.04);
 }
 
 /* Decorative orbs */
-.hero-orbs { position: absolute; inset: 0; pointer-events: none; }
+.hero-orbs { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
 
 .orb {
   position: absolute;
@@ -35,7 +52,7 @@
 .orb3 { width: 180px; height: 180px; top: 40%; right: 12%; animation-delay: 4s; }
 
 /* Floating sparkles */
-.hero-sparkles { position: absolute; inset: 0; pointer-events: none; }
+.hero-sparkles { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
 
 .sp {
   position: absolute;
@@ -57,7 +74,7 @@
   align-items: center;
   gap: 16px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .hero-pill {

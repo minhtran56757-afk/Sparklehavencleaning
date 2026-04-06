@@ -94,7 +94,7 @@ const Contact = () => {
               </div>
               <div className="fg">
                 <label>Phone Number</label>
-                <input type="tel" name="phone" placeholder="04XX XXX XXX" />
+                <input type="tel" name="phone" placeholder="04XX XXX XXX" required />
               </div>
               <div className="fg">
                 <label>Service Type</label>
