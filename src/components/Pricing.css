@@ -70,7 +70,7 @@
 
 .pc h3 {
   font-family: "Playfair Display", serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 12px;
@@ -78,9 +78,9 @@
 }
 
 .pc-desc {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  color: #4a5568;
+  color: #2d3748;
   text-align: center;
   line-height: 1.75;
   margin-bottom: 16px;
@@ -111,7 +111,7 @@
 }
 
 .chk li {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #1a1a2e;
   display: flex;
