@@ -79,8 +79,8 @@
 
 .pc-desc {
   font-size: 14px;
-  font-weight: 300;
-  color: var(--muted);
+  font-weight: 400;
+  color: #4a5568;
   text-align: center;
   line-height: 1.75;
   margin-bottom: 16px;
@@ -111,7 +111,7 @@
 }
 
 .chk li {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: #1a1a2e;
   display: flex;

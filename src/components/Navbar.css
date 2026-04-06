@@ -23,7 +23,7 @@ header.sc {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 40px;
-  height: 80px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,32 +39,34 @@ header.sc {
 }
 
 .logo-img {
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
   object-fit: cover;
   display: block;
+  box-shadow: 0 0 24px rgba(201, 168, 76, 0.5), 0 0 0 2.5px rgba(201, 168, 76, 0.35);
 }
 
 .logo-name {
   display: block;
   font-family: "Playfair Display", serif;
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   line-height: 1;
+  text-shadow: 0 0 24px rgba(201, 168, 76, 0.5);
 }
 
 .logo-sub {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 6px;
 }
 
 .desktop-nav {
@@ -212,7 +214,7 @@ header.sc {
 
 .mm {
   position: fixed;
-  top: 80px;
+  top: 120px;
   left: 0;
   right: 0;
   background: rgba(0, 17, 30, 0.98);
