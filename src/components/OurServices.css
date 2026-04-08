@@ -1,93 +1,94 @@
-.og {
+.light-alt {
+  background: #f4f6f9;
+}
+
+.rule-dark {
+  background: linear-gradient(to right, transparent, var(--navy), transparent);
+}
+
+.ey-dark {
+  color: var(--navy);
+  border-color: rgba(0, 42, 90, 0.25);
+  background: rgba(0, 42, 90, 0.06);
+}
+
+.h2-dark .tw-dark {
+  color: var(--dark);
+}
+
+.sp-dark {
+  color: rgba(0, 26, 46, 0.7);
+}
+
+/* ── Grid ── */
+.svc-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
 }
 
-.oc {
-  flex: 0 0 calc(50% - 12px);
-  background: var(--white);
-  border-radius: 8px;
+.svc-card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
   position: relative;
 }
 
-.oc::after {
+.svc-card::after {
   content: '';
   position: absolute;
   top: 0;
   left: -80%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
   transform: skewX(-15deg);
   transition: left 0.65s ease;
   pointer-events: none;
   z-index: 3;
 }
 
-.oc:hover::after {
+.svc-card:hover::after {
   left: 160%;
 }
 
-.oc:hover {
+.svc-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.4), 0 0 0 2px var(--gold);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.18), 0 0 0 2px var(--gold);
 }
 
-.oi {
+/* ── Image ── */
+.svc-img-wrap {
   position: relative;
-  height: 340px;
+  height: 260px;
   overflow: hidden;
 }
 
-.oi-img {
+.svc-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center;
   display: block;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.oc:hover .oi-img {
+.svc-card:hover .svc-img {
   transform: scale(1.06);
 }
 
-.oi-placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--mid) 100%);
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.oi-placeholder-2 {
-  background: linear-gradient(135deg, var(--mid) 0%, #004080 100%);
-}
-
-.oi-placeholder-3 {
-  background: linear-gradient(135deg, #002a52 0%, #003366 50%, #001f3f 100%);
-}
-
-.oi-placeholder-4 {
-  background: linear-gradient(135deg, #001f3f 0%, #003355 50%, #002a52 100%);
-}
-
-.oc:hover .oi-placeholder {
-  transform: scale(1.06);
-}
-
-.oi::after {
-  content: "";
+.svc-img-wrap::after {
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(0, 18, 40, 0.4));
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 18, 40, 0.35));
 }
 
-.obg {
+.svc-badge {
   position: absolute;
   bottom: 14px;
   left: 16px;
@@ -95,19 +96,20 @@
   background: linear-gradient(135deg, var(--gold-l), var(--gold));
   color: var(--dark);
   font-size: 10px;
-  box-shadow: 0 3px 10px rgba(201, 168, 76, 0.45);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 5px 14px;
   border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(201, 168, 76, 0.45);
 }
 
-.ob {
-  padding: 32px 32px 36px;
+/* ── Body ── */
+.svc-body {
+  padding: 28px 28px 32px;
 }
 
-.ob h3 {
+.svc-body h3 {
   font-family: "Playfair Display", serif;
   font-size: 22px;
   font-weight: 700;
@@ -115,19 +117,14 @@
   margin-bottom: 10px;
 }
 
-.ob p {
+.svc-body p {
   font-size: 15px;
   font-weight: 400;
   color: #4a5568;
   line-height: 1.75;
 }
 
-.ob p strong {
-  color: #1a1a2e;
-  font-weight: 600;
-}
-
-.ob-link {
+.svc-link {
   display: inline-block;
   margin-top: 16px;
   font-size: 12px;
@@ -140,18 +137,23 @@
   transition: color 0.2s;
 }
 
-.ob-link:hover {
+.svc-link:hover {
   color: var(--gold);
 }
 
-@media (max-width: 600px) {
-  .oc {
-    flex: 0 0 100%;
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .svc-card {
+    flex: 0 0 calc(50% - 12px);
   }
 }
 
 @media (max-width: 600px) {
-  .oi {
+  .svc-card {
+    flex: 0 0 100%;
+  }
+
+  .svc-img-wrap {
     height: 220px;
   }
 }

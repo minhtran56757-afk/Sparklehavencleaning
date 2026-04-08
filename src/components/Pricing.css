@@ -1,8 +1,8 @@
 .pg {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
-  max-width: 920px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -189,6 +189,51 @@
   background: var(--gold-l) !important;
 }
 
+.pc-empty {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 2px dashed rgba(201, 168, 76, 0.3) !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pc-empty:hover {
+  border-color: rgba(201, 168, 76, 0.6) !important;
+  background: rgba(201, 168, 76, 0.05) !important;
+}
+
+.pc-empty-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pc-empty-ico {
+  font-size: 28px;
+  color: rgba(201, 168, 76, 0.4);
+}
+
+.pc-empty h3 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.pc-empty .pc-desc {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.pc-quote {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  font-style: italic;
+}
+
 .price-note {
   text-align: center;
   margin-top: 36px;
@@ -198,7 +243,13 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
+  .pg {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   .pg {
     grid-template-columns: 1fr;
     max-width: 480px;
