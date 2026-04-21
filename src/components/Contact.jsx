@@ -42,7 +42,8 @@ const Contact = () => {
               </div>
               <div>
                 <h4>Call Us</h4>
-                <a href="tel:0439578719">0439 578 719</a>
+                <p><a href="tel:0439578719">0439 578 719</a></p>
+                <p><a href="tel:0492915777">0492 915 777</a></p>
               </div>
             </div>
 

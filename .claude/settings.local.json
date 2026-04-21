@@ -4,7 +4,8 @@
       "Bash(cat vite.config.js)",
       "Bash(cat vite.config.ts)",
       "Bash(npm run *)",
-      "Bash(npx vite *)"
+      "Bash(npx vite *)",
+      "Bash(npm install *)"
     ]
   }
 }
