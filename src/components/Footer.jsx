@@ -28,7 +28,7 @@ const Footer = () => {
           <a href="tel:0439578719">0439 578 719</a>
           <br />
           <a href="tel:0492915777">0492 915 777</a>
-          <a href="mailto:Hello@sparklehavencleaning.com.au">Hello@sparklehavencleaning.com.au</a>
+          <a href="mailto:sparklehavencleaningservices@gmail.com">sparklehavencleaningservices@gmail.com</a>
           <a href="#contact">Book Online</a>
         </div>
       </div>

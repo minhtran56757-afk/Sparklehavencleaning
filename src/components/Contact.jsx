@@ -7,7 +7,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('https://formspree.io/f/xvzwnjbk', {
+    fetch('https://formspree.io/f/mjgjagby', {
       method: 'POST',
       body: new FormData(form),
       headers: { Accept: 'application/json' },
@@ -56,7 +56,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4>Email Us</h4>
-                <a href="mailto:Hello@sparklehavencleaning.com.au">Hello@sparklehavencleaning.com.au</a>
+                <a href="mailto:sparklehavencleaningservices@gmail.com">sparklehavencleaningservices@gmail.com</a>
               </div>
             </div>
 
