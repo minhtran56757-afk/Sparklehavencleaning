@@ -5,7 +5,16 @@
       "Bash(cat vite.config.ts)",
       "Bash(npm run *)",
       "Bash(npx vite *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(nslookup www.sparklehavencleaning.com.au 8.8.8.8)",
+      "Bash(nslookup sparklehavencleaning.com.au 8.8.8.8)",
+      "Bash(gh api *)",
+      "Bash(curl -s -H \"Accept: application/vnd.github+json\" https://api.github.com/repos/minhtran56757-afk/Sparklehavencleaning/pages)",
+      "Bash(curl -sI https://www.sparklehavencleaning.com.au)",
+      "Bash(curl -sI http://www.sparklehavencleaning.com.au)"
     ]
   }
 }
