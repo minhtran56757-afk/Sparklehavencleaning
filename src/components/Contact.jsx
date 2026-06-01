@@ -56,7 +56,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4>Email Us</h4>
-                <a href="mailto:sparklehavencleaningservices@gmail.com">sparklehavencleaningservices@gmail.com</a>
+                <a href="mailto:sales@sparklehavencleaning.com.au">sales@sparklehavencleaning.com.au</a>
               </div>
             </div>
 
