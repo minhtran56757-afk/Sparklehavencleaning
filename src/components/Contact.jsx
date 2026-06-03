@@ -7,7 +7,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('https://formspree.io/f/mjgjagby', {
+    fetch('https://formspree.io/f/mqeozjbk', {
       method: 'POST',
       body: new FormData(form),
       headers: { Accept: 'application/json' },
