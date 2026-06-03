@@ -3,9 +3,11 @@ import './Contact.css';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
     const form = e.target;
     fetch('https://formspree.io/f/mqeozjbk', {
       method: 'POST',
@@ -15,8 +17,12 @@ const Contact = () => {
       if (res.ok) {
         setSubmitted(true);
         form.reset();
+      } else {
+        res.json().then((data) => {
+          setError(data?.error || `Submission failed (${res.status}). Please try again.`);
+        }).catch(() => setError(`Submission failed (${res.status}). Please try again.`));
       }
-    });
+    }).catch(() => setError('Network error. Please check your connection and try again.'));
   };
 
   return (
@@ -115,6 +121,11 @@ const Contact = () => {
               {submitted && (
                 <div className="form-ok show">
                   ✓ Thank you! We'll be in touch within 2 hours.
+                </div>
+              )}
+              {error && (
+                <div style={{ color: '#e74c3c', marginTop: '12px', fontSize: '14px' }}>
+                  ✗ {error}
                 </div>
               )}
             </form>
